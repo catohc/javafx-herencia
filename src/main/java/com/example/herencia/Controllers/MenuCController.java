@@ -3,6 +3,7 @@ package com.example.herencia.Controllers;
 import com.example.herencia.HelloApplication;
 import com.example.herencia.Models.*;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -45,40 +46,40 @@ public class MenuCController {
     private TableView<Zombie> Mzombie;
 
     @FXML
-    private TableColumn<Oni,String> danoni;
+    private TableColumn<Oni, String> danoni;
 
     @FXML
-    private TableColumn<Vampiro,String> danov;
+    private TableColumn<Vampiro, String> danov;
 
     @FXML
     private TableColumn<Zombie, String> danoz;
 
     @FXML
-    private TableColumn<Arquera,String> defar;
+    private TableColumn<Arquera, String> defar;
 
     @FXML
-    private TableColumn<Espadachin,String> defesp;
+    private TableColumn<Espadachin, String> defesp;
 
     @FXML
-    private TableColumn<Mago,String> defmag;
+    private TableColumn<Mago, String> defmag;
 
     @FXML
-    private TableColumn<Arquera,String> especialar;
+    private TableColumn<Arquera, String> especialar;
 
     @FXML
-    private TableColumn<Espadachin,String> especialesp;
+    private TableColumn<Espadachin, String> especialesp;
 
     @FXML
-    private TableColumn<Mago,String> especialmag;
+    private TableColumn<Mago, String> especialmag;
 
     @FXML
-    private TableColumn<Oni,String> especialoni;
+    private TableColumn<Oni, String> especialoni;
 
     @FXML
-    private TableColumn<Vampiro,String> especialv;
+    private TableColumn<Vampiro, String> especialv;
 
     @FXML
-    private TableColumn<Zombie,String> especialz;
+    private TableColumn<Zombie, String> especialz;
 
     @FXML
     private ImageView modmagic;
@@ -93,27 +94,28 @@ public class MenuCController {
     private ImageView modzom;
 
     @FXML
-    private TableColumn<Arquera,String> vidaar;
+    private TableColumn<Arquera, String> vidaar;
 
     @FXML
-    private TableColumn<Espadachin,String> vidaesp;
+    private TableColumn<Espadachin, String> vidaesp;
 
     @FXML
-    private TableColumn<Mago,String> vidamag;
+    private TableColumn<Mago, String> vidamag;
 
     @FXML
-    private TableColumn<Oni,String> vidaoni;
+    private TableColumn<Oni, String> vidaoni;
 
     @FXML
-    private TableColumn<Vampiro,String> vidav;
+    private TableColumn<Vampiro, String> vidav;
 
     @FXML
-    private TableColumn<Zombie,String> vidaz;
+    private TableColumn<Zombie, String> vidaz;
 
     @FXML
     void Bttnexit(MouseEvent event) {
         HelloApplication.getStageView().close();
     }
+
     @FXML
     void initialize() {
         vidaesp.setCellValueFactory(new PropertyValueFactory<>("vida"));
@@ -135,55 +137,110 @@ public class MenuCController {
         vidav.setCellValueFactory(new PropertyValueFactory<>("vida"));
         especialv.setCellValueFactory(new PropertyValueFactory<>("sangrado"));
     }
+
     @FXML
     void Actu(MouseEvent event) {
         Listas lista = HelloApplication.getListas();
-        Mespada.refresh();
+        Mespada.getItems().clear();
         Mespada.getItems().addAll(lista.getListaE());
-        Mar.refresh();
+        Mar.getItems().clear();
         Mar.getItems().addAll(lista.getListaA());
-        Mmagic.refresh();
+        Mmagic.getItems().clear();
         Mmagic.getItems().addAll(lista.getListaMag());
     }
 
     @FXML
     void Actu2(MouseEvent event) {
         Listas lista = HelloApplication.getListas();
-        Mzombie.refresh();
+        Mzombie.getItems().clear();
         Mzombie.getItems().addAll(lista.getListaZom());
-        Moni.refresh();
+        Moni.getItems().clear();
         Moni.getItems().addAll(lista.getListaOni());
-        Mvamp.refresh();
+        Mvamp.getItems().clear();
         Mvamp.getItems().addAll(lista.getListavamp());
     }
+
     @FXML
     void Modar(MouseEvent event) {
-
+        Listas listas = HelloApplication.getListas();
+        if (listas.getListaA().isEmpty()) {
+            Arquera arquera = new Arquera("120", "64", "40");
+            HelloApplication.getListas().setListaA(arquera);
+        } else {
+            Alert alerterrorp = new Alert(Alert.AlertType.ERROR);
+            alerterrorp.setHeaderText("Ya se ha generado uno");
+            alerterrorp.setContentText("no vuelva a generar otro...");
+            alerterrorp.showAndWait();
+        }
     }
 
     @FXML
     void Modesp(MouseEvent event) {
-        Espadachin esp = new Espadachin("120","64","34%");
-        HelloApplication.getListas().setListaE(esp);
+        Listas listas = HelloApplication.getListas();
+        if (listas.getListaE().isEmpty()) {
+            Espadachin esp = new Espadachin("120", "64", "34%pvx");
+            HelloApplication.getListas().setListaE(esp);
+        } else {
+            Alert alerterrorp = new Alert(Alert.AlertType.ERROR);
+            alerterrorp.setHeaderText("Ya se ha generado uno");
+            alerterrorp.setContentText("no vuelva a generar otro...");
+            alerterrorp.showAndWait();
+        }
     }
 
     @FXML
     void modmagic(MouseEvent event) {
-
+        Listas listas = HelloApplication.getListas();
+        if (listas.getListaMag().isEmpty()) {
+            Mago magic = new Mago("120", "64", "42%pvx");
+            HelloApplication.getListas().setListaMag(magic);
+        } else {
+            Alert alerterrorp = new Alert(Alert.AlertType.ERROR);
+            alerterrorp.setHeaderText("Ya se ha generado uno");
+            alerterrorp.setContentText("no vuelva a generar otro...");
+            alerterrorp.showAndWait();
+        }
     }
 
     @FXML
     void modoni(MouseEvent event) {
-
+        Listas listas = HelloApplication.getListas();
+        if (listas.getListaOni().isEmpty()) {
+            Oni oni = new Oni("35", "280", "20");
+            HelloApplication.getListas().setListaOni(oni);
+        } else {
+            Alert alerterrorp = new Alert(Alert.AlertType.ERROR);
+            alerterrorp.setHeaderText("Ya se ha generado uno");
+            alerterrorp.setContentText("no vuelva a generar otro...");
+            alerterrorp.showAndWait();
+        }
     }
 
     @FXML
     void modvamp(MouseEvent event) {
-
+        Listas listas = HelloApplication.getListas();
+        if (listas.getListavamp().isEmpty()) {
+            Vampiro vampiro = new Vampiro("32", "250", "12%pvx");
+            HelloApplication.getListas().setListavamp(vampiro);
+        } else {
+            Alert alerterrorp = new Alert(Alert.AlertType.ERROR);
+            alerterrorp.setHeaderText("Ya se ha generado uno");
+            alerterrorp.setContentText("no vuelva a generar otro...");
+            alerterrorp.showAndWait();
+        }
     }
 
     @FXML
     void modzom(MouseEvent event) {
-
+        Listas listas = HelloApplication.getListas();
+        if (listas.getListaZom().isEmpty()) {
+            Zombie zombie = new Zombie("25", "110", "20%pvx");
+            HelloApplication.getListas().setListaZom(zombie);
+        } else {
+            Alert alerterrorp = new Alert(Alert.AlertType.ERROR);
+            alerterrorp.setHeaderText("Ya se ha generado uno");
+            alerterrorp.setContentText("no vuelva a generar otro...");
+            alerterrorp.showAndWait();
+        }
     }
 }

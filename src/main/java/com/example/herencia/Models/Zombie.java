@@ -7,4 +7,12 @@ public class Zombie extends Mounstruos{
         super(dano, vida);
         this.envenenamiento = envenenamiento;
     }
+
+    public String getEnvenenamiento() {
+        return envenenamiento;
+    }
+
+    public void setEnvenenamiento(String envenenamiento) {
+        this.envenenamiento = envenenamiento;
+    }
 }

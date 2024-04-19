@@ -8,4 +8,20 @@ public class Mounstruos {
         this.dano = dano;
         this.vida = vida;
     }
+
+    public String getDano() {
+        return dano;
+    }
+
+    public void setDano(String dano) {
+        this.dano = dano;
+    }
+
+    public String getVida() {
+        return vida;
+    }
+
+    public void setVida(String vida) {
+        this.vida = vida;
+    }
 }
