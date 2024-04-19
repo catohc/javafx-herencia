@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="622.0" prefWidth="926.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.herencia.Controllers.MenuCController">
+   <children>
+      <ImageView fx:id="Actu" fitHeight="404.0" fitWidth="948.0" layoutX="-14.0" layoutY="-26.0" onMouseClicked="#Actu" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imagenes/forestfjx.gif" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="Actu2" fitHeight="689.0" fitWidth="983.0" layoutX="-14.0" layoutY="345.0" onMouseClicked="#Actu2" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imagenes/helljfx.gif" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="Modesp" fitHeight="188.0" fitWidth="176.0" layoutX="86.0" layoutY="37.0" onMouseClicked="#Modesp" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imagenes/linkjfx.gif" />
+         </image>
+      </ImageView>
+      <TableView fx:id="Mespada" layoutX="61.0" layoutY="213.0" prefHeight="94.0" prefWidth="226.0">
+        <columns>
+          <TableColumn fx:id="vidaesp" prefWidth="75.0" text="Vida" />
+          <TableColumn fx:id="defesp" prefWidth="75.0" text="Def" />
+            <TableColumn fx:id="especialesp" prefWidth="75.0" text="DañoCrit" />
+        </columns>
+      </TableView>
+      <TableView fx:id="Mar" layoutX="347.0" layoutY="216.0" prefHeight="94.0" prefWidth="260.0">
+         <columns>
+            <TableColumn fx:id="vidaar" prefWidth="75.0" text="Vida" />
+            <TableColumn fx:id="defar" prefWidth="75.0" text="Def" />
+            <TableColumn fx:id="especialar" prefWidth="108.79998779296875" text="Distance damage" />
+         </columns>
+      </TableView>
+      <TableView fx:id="Mmagic" layoutX="663.0" layoutY="216.0" prefHeight="94.0" prefWidth="226.0">
+         <columns>
+            <TableColumn fx:id="vidamag" prefWidth="75.0" text="Vida" />
+            <TableColumn fx:id="defmag" prefWidth="75.0" text="Def" />
+            <TableColumn fx:id="especialmag" prefWidth="75.0" text="Magia" />
+         </columns>
+      </TableView>
+      <ImageView fx:id="Modar" fitHeight="204.0" fitWidth="184.0" layoutX="386.0" layoutY="14.0" onMouseClicked="#Modar" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imagenes/archerjfx.gif" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="modmagic" fitHeight="163.0" fitWidth="242.0" layoutX="647.0" layoutY="56.0" onMouseClicked="#modmagic" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imagenes/wizardfjx.gif" />
+         </image>
+      </ImageView>
+      <TableView fx:id="Mzombie" layoutX="44.0" layoutY="513.0" prefHeight="94.0" prefWidth="260.0">
+         <columns>
+            <TableColumn fx:id="danoz" prefWidth="75.0" text="Daño" />
+            <TableColumn fx:id="vidaz" prefWidth="75.0" text="Vida" />
+            <TableColumn fx:id="especialz" prefWidth="108.79998779296875" text="Envenenamiento" />
+         </columns>
+      </TableView>
+      <TableView fx:id="Mvamp" layoutX="663.0" layoutY="513.0" prefHeight="94.0" prefWidth="226.0">
+         <columns>
+            <TableColumn fx:id="danov" prefWidth="75.0" text="Daño" />
+            <TableColumn fx:id="vidav" prefWidth="75.0" text="Vida" />
+            <TableColumn fx:id="especialv" prefWidth="75.0" text="Sangrado" />
+         </columns>
+      </TableView>
+      <TableView fx:id="Moni" layoutX="365.0" layoutY="513.0" prefHeight="94.0" prefWidth="226.0">
+         <columns>
+            <TableColumn fx:id="danoni" prefWidth="75.0" text="Daño" />
+            <TableColumn fx:id="vidaoni" prefWidth="75.0" text="Vida" />
+            <TableColumn fx:id="especialoni" prefWidth="75.0" text="Alucinacion" />
+         </columns>
+      </TableView>
+      <ImageView fx:id="modzom" fitHeight="150.0" fitWidth="200.0" layoutX="99.0" layoutY="345.0" onMouseClicked="#modzom" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imagenes/zombiejfx.gif" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="modoni" fitHeight="150.0" fitWidth="200.0" layoutX="402.0" layoutY="345.0" onMouseClicked="#modoni" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imagenes/deviljfx.gif" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="modvamp" fitHeight="150.0" fitWidth="200.0" layoutX="701.0" layoutY="345.0" onMouseClicked="#modvamp" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imagenes/vampirejfx.gif" />
+         </image>
+      </ImageView>
+      <Button fx:id="Bttnexit" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#Bttnexit" prefHeight="38.0" prefWidth="78.0" style="-fx-background-color: #313131; -fx-background-radius: 5em;" text="Salir" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
