@@ -3,13 +3,12 @@ package com.example.herencia.Controllers;
 import com.example.herencia.HelloApplication;
 import com.example.herencia.Models.*;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+
+import java.util.Optional;
 
 public class MenuCController {
     @FXML
@@ -35,6 +34,8 @@ public class MenuCController {
 
     @FXML
     private ImageView Modesp;
+    @FXML
+    private Button Select;
 
     @FXML
     private TableView<Oni> Moni;
@@ -241,6 +242,19 @@ public class MenuCController {
             alerterrorp.setHeaderText("Ya se ha generado uno");
             alerterrorp.setContentText("no vuelva a generar otro...");
             alerterrorp.showAndWait();
+        }
+    }
+    @FXML
+    void Select(MouseEvent event) {
+        Alert alertC = new Alert(Alert.AlertType.CONFIRMATION);
+        alertC.setHeaderText("Confirmacion");
+        alertC.setContentText("¿Estas seguro que quieres este personaje?");
+        Optional<ButtonType> result = alertC.showAndWait();
+        if (result.isPresent() && result.get() == ButtonType.OK){
+            Alert alertagregar = new Alert(Alert.AlertType.INFORMATION);
+            alertagregar.setHeaderText("Ha elegido un personaje");
+            alertagregar.setContentText("Esta listo para la batalla!");
+            alertagregar.showAndWait();
         }
     }
 }

@@ -3,6 +3,7 @@ package com.example.herencia.Controllers;
 import com.example.herencia.HelloApplication;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -33,7 +34,11 @@ public class MenuController {
 
     @FXML
     void Bttnplay(MouseEvent event) {
-
+        Alert alerterrorp = new Alert(Alert.AlertType.ERROR);
+        alerterrorp.setHeaderText("Error: ");
+        alerterrorp.setContentText("WARNING: Can not retrieve property 'game' in PropertyValueFactory: javafx.scene.control.cell.PropertyValueFactory@6d5a2930 with provided class type: class com.example.herencia.Game\n" +
+                "java.lang.IllegalStateException: Cannot read from unreadable property");
+        alerterrorp.showAndWait();
     }
 
     @FXML

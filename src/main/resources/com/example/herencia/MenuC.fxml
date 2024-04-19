@@ -10,84 +10,84 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="622.0" prefWidth="926.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.herencia.Controllers.MenuCController">
    <children>
-      <ImageView fx:id="Actu" fitHeight="404.0" fitWidth="948.0" layoutX="-14.0" layoutY="-26.0" onMouseClicked="#Actu" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="Actu" fitHeight="404.0" fitWidth="963.0" layoutX="-29.0" layoutY="-26.0" onMouseClicked="#Actu" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@imagenes/forestfjx.gif" />
          </image>
       </ImageView>
-      <ImageView fx:id="Actu2" fitHeight="689.0" fitWidth="983.0" layoutX="-14.0" layoutY="345.0" onMouseClicked="#Actu2" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="Actu2" fitHeight="689.0" fitWidth="983.0" layoutX="-7.0" layoutY="311.0" onMouseClicked="#Actu2" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@imagenes/helljfx.gif" />
          </image>
       </ImageView>
-      <ImageView fx:id="Modesp" fitHeight="188.0" fitWidth="176.0" layoutX="86.0" layoutY="37.0" onMouseClicked="#Modesp" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="Modesp" fitHeight="188.0" fitWidth="176.0" layoutX="86.0" layoutY="7.0" onMouseClicked="#Modesp" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@imagenes/linkjfx.gif" />
          </image>
       </ImageView>
-      <TableView fx:id="Mespada" layoutX="61.0" layoutY="213.0" prefHeight="94.0" prefWidth="226.0">
+      <TableView fx:id="Mespada" layoutX="61.0" layoutY="183.0" prefHeight="94.0" prefWidth="226.0">
         <columns>
           <TableColumn fx:id="vidaesp" prefWidth="75.0" text="Vida" />
           <TableColumn fx:id="defesp" prefWidth="75.0" text="Def" />
             <TableColumn fx:id="especialesp" prefWidth="75.0" text="DañoCrit" />
         </columns>
       </TableView>
-      <TableView fx:id="Mar" layoutX="347.0" layoutY="216.0" prefHeight="94.0" prefWidth="260.0">
+      <TableView fx:id="Mar" layoutX="347.0" layoutY="183.0" prefHeight="94.0" prefWidth="260.0">
          <columns>
             <TableColumn fx:id="vidaar" prefWidth="75.0" text="Vida" />
             <TableColumn fx:id="defar" prefWidth="75.0" text="Def" />
             <TableColumn fx:id="especialar" prefWidth="108.79998779296875" text="Distance damage" />
          </columns>
       </TableView>
-      <TableView fx:id="Mmagic" layoutX="663.0" layoutY="216.0" prefHeight="94.0" prefWidth="226.0">
+      <TableView fx:id="Mmagic" layoutX="655.0" layoutY="183.0" prefHeight="94.0" prefWidth="226.0">
          <columns>
             <TableColumn fx:id="vidamag" prefWidth="75.0" text="Vida" />
             <TableColumn fx:id="defmag" prefWidth="75.0" text="Def" />
             <TableColumn fx:id="especialmag" prefWidth="75.0" text="Magia" />
          </columns>
       </TableView>
-      <ImageView fx:id="Modar" fitHeight="204.0" fitWidth="184.0" layoutX="386.0" layoutY="14.0" onMouseClicked="#Modar" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="Modar" fitHeight="204.0" fitWidth="184.0" layoutX="386.0" layoutY="-18.0" onMouseClicked="#Modar" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@imagenes/archerjfx.gif" />
          </image>
       </ImageView>
-      <ImageView fx:id="modmagic" fitHeight="163.0" fitWidth="242.0" layoutX="647.0" layoutY="56.0" onMouseClicked="#modmagic" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="modmagic" fitHeight="163.0" fitWidth="242.0" layoutX="647.0" layoutY="14.0" onMouseClicked="#modmagic" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@imagenes/wizardfjx.gif" />
          </image>
       </ImageView>
-      <TableView fx:id="Mzombie" layoutX="44.0" layoutY="513.0" prefHeight="94.0" prefWidth="260.0">
+      <TableView fx:id="Mzombie" layoutX="44.0" layoutY="475.0" prefHeight="94.0" prefWidth="260.0">
          <columns>
             <TableColumn fx:id="danoz" prefWidth="75.0" text="Daño" />
             <TableColumn fx:id="vidaz" prefWidth="75.0" text="Vida" />
             <TableColumn fx:id="especialz" prefWidth="108.79998779296875" text="Envenenamiento" />
          </columns>
       </TableView>
-      <TableView fx:id="Mvamp" layoutX="663.0" layoutY="513.0" prefHeight="94.0" prefWidth="226.0">
+      <TableView fx:id="Mvamp" layoutX="663.0" layoutY="475.0" prefHeight="94.0" prefWidth="226.0">
          <columns>
             <TableColumn fx:id="danov" prefWidth="75.0" text="Daño" />
             <TableColumn fx:id="vidav" prefWidth="75.0" text="Vida" />
             <TableColumn fx:id="especialv" prefWidth="75.0" text="Sangrado" />
          </columns>
       </TableView>
-      <TableView fx:id="Moni" layoutX="365.0" layoutY="513.0" prefHeight="94.0" prefWidth="226.0">
+      <TableView fx:id="Moni" layoutX="365.0" layoutY="475.0" prefHeight="94.0" prefWidth="226.0">
          <columns>
             <TableColumn fx:id="danoni" prefWidth="75.0" text="Daño" />
             <TableColumn fx:id="vidaoni" prefWidth="75.0" text="Vida" />
             <TableColumn fx:id="especialoni" prefWidth="75.0" text="Alucinacion" />
          </columns>
       </TableView>
-      <ImageView fx:id="modzom" fitHeight="150.0" fitWidth="200.0" layoutX="99.0" layoutY="345.0" onMouseClicked="#modzom" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="modzom" fitHeight="150.0" fitWidth="200.0" layoutX="99.0" layoutY="318.0" onMouseClicked="#modzom" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@imagenes/zombiejfx.gif" />
          </image>
       </ImageView>
-      <ImageView fx:id="modoni" fitHeight="150.0" fitWidth="200.0" layoutX="402.0" layoutY="345.0" onMouseClicked="#modoni" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="modoni" fitHeight="150.0" fitWidth="200.0" layoutX="403.0" layoutY="311.0" onMouseClicked="#modoni" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@imagenes/deviljfx.gif" />
          </image>
       </ImageView>
-      <ImageView fx:id="modvamp" fitHeight="150.0" fitWidth="200.0" layoutX="701.0" layoutY="345.0" onMouseClicked="#modvamp" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="modvamp" fitHeight="150.0" fitWidth="200.0" layoutX="701.0" layoutY="311.0" onMouseClicked="#modvamp" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@imagenes/vampirejfx.gif" />
          </image>
@@ -97,5 +97,11 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Button>
+      <Button fx:id="Select" layoutX="145.0" layoutY="277.0" mnemonicParsing="false" onMouseClicked="#Select" prefHeight="26.0" prefWidth="57.0" style="-fx-background-color: #D1F297; -fx-background-radius: 5em;" text="Select" />
+      <Button fx:id="Select" layoutX="449.0" layoutY="277.0" mnemonicParsing="false" onMouseClicked="#Select" prefHeight="26.0" prefWidth="57.0" style="-fx-background-color: #D1F297; -fx-background-radius: 5em;" text="Select" />
+      <Button fx:id="Select" layoutX="747.0" layoutY="277.0" mnemonicParsing="false" onMouseClicked="#Select" prefHeight="26.0" prefWidth="57.0" style="-fx-background-color: #D1F297; -fx-background-radius: 5em;" text="Select" />
+      <Button fx:id="Select" layoutX="145.0" layoutY="569.0" mnemonicParsing="false" onMouseClicked="#Select" prefHeight="26.0" prefWidth="57.0" style="-fx-background-color: #F2465F; -fx-background-radius: 5em;" text="Select" />
+      <Button fx:id="Select" layoutX="434.0" layoutY="569.0" mnemonicParsing="false" onMouseClicked="#Select" prefHeight="26.0" prefWidth="57.0" style="-fx-background-color: #F2465F; -fx-background-radius: 5em;" text="Select" />
+      <Button fx:id="Select" layoutX="747.0" layoutY="569.0" mnemonicParsing="false" onMouseClicked="#Select" prefHeight="26.0" prefWidth="57.0" style="-fx-background-color: #F2465F; -fx-background-radius: 5em;" text="Select" />
    </children>
 </AnchorPane>
